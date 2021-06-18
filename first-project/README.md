@@ -11,3 +11,8 @@
 принятому [стилю оформления кода](https://github.com/netology-code/codestyle/tree/master/python).
 
 Любые вопросы по решению задач задавайте в Slack-чате.
+
+
+## Решение:
+- [urls.py](first_project/first_project/urls.py)
+- [views.py](first_project/app/views.py)
