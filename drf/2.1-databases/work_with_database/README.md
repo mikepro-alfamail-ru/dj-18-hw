@@ -1,5 +1,17 @@
 # Знакомство с базами данных
 
+## Выполнено 1:
+
+### Измененные файлы:
+
+[urls.py](./main/urls.py)
+
+[models.py](./phones/models.py)
+
+[views.py](./phones/views.py)
+
+[import_phones.py](./phones/management/commands/import_phones.py)
+
 ## Задание
 
 Есть некоторый [csv-файл](./phones.csv), который выгружается с сайта-партнера. Этот сайт занимается продажей телефонов.
