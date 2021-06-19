@@ -12,7 +12,7 @@ def show_catalog(request):
         'max_price': '-price'
     }
     sort_method = request.GET.get('sort', 'name')
-    phones = Phone.objects.all().order_by(sorting.get(sort_method))
+    phones = Phone.objects.order_by(sorting.get(sort_method))
     template = 'catalog.html'
     context = {
         'phones': phones

@@ -1,5 +1,19 @@
 # Работа с базой (отображение списка моделей)
 
+## Выполнено:
+
+### Измененные файлы:
+
+[urls.py](./main/urls.py)
+
+[settings.py](./main/settings.py)
+
+[views.py](./books/views.py)
+
+[books_list.html](./templates/books/books_list.html)
+
+[books.json](./fixtures/books.json)
+
 ## Задание
 
 Необходимо сделать онлайн библиотеку с каталогом книг. Библиотека должна состоять из двух страниц:
