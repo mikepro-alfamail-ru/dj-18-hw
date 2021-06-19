@@ -40,7 +40,6 @@ def recipe_view(request, dish):
     servings = request.GET.get('servings')
     servings = is_int(servings) if is_int(servings) else 1
     recipe = DATA.get(dish)
-    # print(recipe, servings)
     if recipe:
         context = {
             'recipe': {key: value * servings for key, value in recipe.items()}

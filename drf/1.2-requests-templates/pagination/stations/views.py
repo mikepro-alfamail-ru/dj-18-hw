@@ -29,7 +29,7 @@ def bus_stations(request):
                     station.get('District')
                 )
             )
-        print('!!!')
+
     paginator = Paginator(stations_list, 10)
     current_page = request.GET.get('page', 1)
     page = paginator.get_page(current_page)
