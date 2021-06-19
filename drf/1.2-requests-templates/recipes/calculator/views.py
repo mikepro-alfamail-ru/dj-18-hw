@@ -28,3 +28,17 @@ DATA = {
 #     'ингредиент2': количество2,
 #   }
 # }
+def recipe_view(request, dish):
+    servings = request.GET.get('servings')
+    servings = int(servings) if servings is not None else 1
+    recipe = DATA.get(dish)
+    # print(recipe, servings)
+    if recipe:
+        context = {
+            'recipe': {key: value * servings for key, value in recipe.items()}
+        }
+    else:
+        context = {
+            'recipe': {dish: 'Нет такого рецепта'}
+        }
+    return render(request, 'calculator/index.html', context)
