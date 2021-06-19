@@ -19,6 +19,14 @@ DATA = {
     # можете добавить свои рецепты ;)
 }
 
+def is_int(inputstr):
+    if inputstr is None:
+        return False
+    try:
+        return int(inputstr)
+    except ValueError:
+        return False
+
 # Напишите ваш обработчик. Используйте DATA как источник данных
 # Результат - render(request, 'calculator/index.html', context)
 # В качестве контекста должен быть передан словарь с рецептом:
@@ -30,7 +38,7 @@ DATA = {
 # }
 def recipe_view(request, dish):
     servings = request.GET.get('servings')
-    servings = int(servings) if servings is not None else 1
+    servings = is_int(servings) if is_int(servings) else 1
     recipe = DATA.get(dish)
     # print(recipe, servings)
     if recipe:
