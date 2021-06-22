@@ -1,3 +1,13 @@
+## Выполнено.
+
+### Измененные файлы:
+
+* [admin.py](./articles/admin.py)
+
+* [models.py](./articles/models.py)
+
+* [views.py](./articles/views.py)
+
 ## Задание
 
 Есть небольшой новостной сайт.

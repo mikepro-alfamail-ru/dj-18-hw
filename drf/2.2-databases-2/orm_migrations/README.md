@@ -1,3 +1,13 @@
+## Выполнено.
+
+### Измененные файлы:
+
+* [students_list.html](./templates/school/students_list.html)
+
+* [models.py](./school/models.py)
+
+* [views.py](./school/views.py)
+
 # Миграции
 
 ## Задание
