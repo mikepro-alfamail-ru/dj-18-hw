@@ -7,7 +7,6 @@ class Article(models.Model):
     text = models.TextField(verbose_name='Текст')
     published_at = models.DateTimeField(verbose_name='Дата публикации')
     image = models.ImageField(null=True, blank=True, verbose_name='Изображение',)
-    scopes = models.ManyToManyField('Tag', through='ArticleTag')
 
     class Meta:
         verbose_name = 'Статья'
@@ -15,6 +14,8 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+
 
 
 class Tag(models.Model):
@@ -32,8 +33,9 @@ class Tag(models.Model):
 
 class ArticleTag(models.Model):
 
-    article = models.ForeignKey('Article', on_delete=models.CASCADE)
-    tag = models.ForeignKey('Tag', on_delete=models.CASCADE)
+    article = models.ForeignKey('Article', verbose_name='Статья', on_delete=models.CASCADE, related_name='scopes')
+    tag = models.ForeignKey('Tag', verbose_name='Раздел', on_delete=models.CASCADE, related_name='articles')
     is_main = models.BooleanField(default=False)
     class Meta:
+        verbose_name = 'Раздел'
         verbose_name_plural = 'Разделы'

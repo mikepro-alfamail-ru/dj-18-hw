@@ -11,18 +11,18 @@
 2.1. [Базы данных](./drf/2.1-databases)
 
 2.2. [Базы данных 2]
-<!--(./2.2-databases-2)-->
+<!--(./drf/2.2-databases-2)-->
                           1
 ## Блок 3. Взаимодействие с сайтом
 
 3.1. [Знакомство с API на примере Django REST framework]
-<!--(./3.1-drf-intro)-->
+<!--(./drf/3.1-drf-intro)-->
 
 3.2. [CRUD в DRF]
-<!--(./3.2-crud)-->
+<!--(./drf/3.2-crud)-->
 
 3.3. [Разделение доступа в DRF]
-<!--(./3.3-permissions)-->
+<!--(./drf/3.3-permissions)-->
 
 3.4. [Тестирование Django-приложений с использованием Pytest]
-<!--(./3.4-django-testing)-->
+<!--(./drf/3.4-django-testing)-->
