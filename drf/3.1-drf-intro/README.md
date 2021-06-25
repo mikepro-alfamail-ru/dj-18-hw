@@ -2,13 +2,13 @@
 
 ## Измененные файлы:
 
-- [urls.py](.simple_crud/simple_crud/urls.py)
+- [urls.py](./simple_crud/simple_crud/urls.py)
 
-- [serializers.py](.simple_crud/measurements/serializers.py)
+- [serializers.py](./simple_crud/measurements/serializers.py)
 
-- [models.py](.simple_crud/measurements/models.py)
+- [models.py](./simple_crud/measurements/models.py)
 
-- [views.py](.simple_crud/measurements/views.py)
+- [views.py](./simple_crud/measurements/views.py)
 
 # Знакомство с API на примере Django REST framework
 

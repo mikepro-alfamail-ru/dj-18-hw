@@ -14,8 +14,7 @@
 
 ## Блок 3. Взаимодействие с сайтом
 
-3.1. [Знакомство с API на примере Django REST framework]
-<!--(./drf/3.1-drf-intro)-->
+3.1. [Знакомство с API на примере Django REST framework](./drf/3.1-drf-intro)
 
 3.2. [CRUD в DRF]
 <!--(./drf/3.2-crud)-->
