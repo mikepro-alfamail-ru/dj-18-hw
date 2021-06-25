@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class TimestampFields(models.Model):
     '''
     abstract = True означает создание абстрактного класса
@@ -20,16 +21,13 @@ class TimestampFields(models.Model):
 
 class Project(TimestampFields):
     """Объект на котором проводят измерения."""
-
     name = models.TextField()
     latitude = models.FloatField()
     longitude = models.FloatField()
 
 
-
 class Measurement(TimestampFields):
     """Измерение температуры на объекте."""
-
     value = models.FloatField()
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     image = models.ImageField(
@@ -39,4 +37,3 @@ class Measurement(TimestampFields):
         max_length=10000,
         null=True
     )
-
