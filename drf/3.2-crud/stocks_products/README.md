@@ -1,3 +1,22 @@
+# Выполнено
+
+## Измененные файлы:
+
+- [serializers.py](./logistic/serializers.py)
+
+- [models.py](./logistic/models.py)
+
+- [views.py](./logistic/views.py)
+
+## Дополнительное задание выполнено в виде:
+
+```
+# поиск складов, где есть определенный продукт
+GET {{baseUrl}}/stocks/?search=помид
+Content-Type: application/json
+```
+
+
 # Склады и товары
 
 ## Техническая задача: реализовать CRUD-логику для продуктов и складов, используя Django Rest Framework.
