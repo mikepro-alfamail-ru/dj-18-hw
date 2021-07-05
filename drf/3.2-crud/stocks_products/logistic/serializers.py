@@ -11,24 +11,6 @@ class ProductPositionSerializer(serializers.ModelSerializer):
     class Meta:
         model = StockProduct
         fields = ('product', 'quantity', 'price')
-    # product = serializers.PrimaryKeyRelatedField(
-    #     queryset=Product.objects.all(),
-    #     required=True,
-    # )
-    # stock = serializers.PrimaryKeyRelatedField(
-    #     queryset=Stock.objects.all(),
-    #     required=True,
-    # )
-    # quantity = serializers.IntegerField(min_value=1, default=1)
-    # price = serializers.DecimalField(
-    #     max_digits=18,
-    #     decimal_places=2,
-    #     min_value=0,
-    # )
-    #
-    # class Meta:
-    #     model = StockProduct
-    #     fields = ('id', 'stock', 'product', 'quantity', 'price')
 
 
 class StockSerializer(serializers.ModelSerializer):
@@ -39,24 +21,15 @@ class StockSerializer(serializers.ModelSerializer):
         fields = ['address', 'positions']
 
     def create(self, validated_data):
-        # достаем связанные данные для других таблиц
-        print(validated_data)
         positions = validated_data.pop('positions')
-
-        # создаем склад по его параметрам
         stock = super().create(validated_data)
 
         for position in positions:
-            print(stock, position)
             StockProduct.objects.update_or_create(stock=stock, **position)
-
         return stock
 
     def update(self, instance, validated_data):
-        # достаем связанные данные для других таблиц
         positions = validated_data.pop('positions')
-
-        # обновляем склад по его параметрам
         stock = super().update(instance, validated_data)
 
         positions_to_remove = {position.id: position for position in stock.positions.all()}
