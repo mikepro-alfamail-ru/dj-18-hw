@@ -1,4 +1,4 @@
-# Выполнено, см. [README.md](./stock_products)
+# Выполнено, см. [README.md](./stocks_products)
 
 # CRUD
 
