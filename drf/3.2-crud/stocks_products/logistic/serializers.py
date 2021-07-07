@@ -35,13 +35,8 @@ class StockSerializer(serializers.ModelSerializer):
         positions_to_remove = {position.id: position for position in stock.positions.all()}
         for position in positions:
             position_, created_ = StockProduct.objects.get_or_create(stock=stock, **position)
-            if created_:
-                StockProduct.objects.update_or_create(stock=stock, **position)
-            else:
-                position_.stock = stock
-                position_.save()
+            if not created_:
                 positions_to_remove.pop(position_.id)
-
         for position_ in positions_to_remove.values():
             position_.delete()
 
