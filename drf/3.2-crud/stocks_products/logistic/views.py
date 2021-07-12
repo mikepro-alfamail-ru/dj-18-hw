@@ -5,6 +5,7 @@ from rest_framework import filters
 from logistic.models import Product, Stock
 from logistic.serializers import ProductSerializer, StockSerializer
 
+
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
