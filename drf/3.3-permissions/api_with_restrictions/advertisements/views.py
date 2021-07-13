@@ -18,6 +18,8 @@ class AdvertisementViewSet(ModelViewSet):
     def list(self, request, *args, **kwargs):
         if request.user.is_anonymous:
             self.queryset = Advertisement.objects.filter(~Q(status="DRAFT"))
+        elif request.user.is_superuser:
+            self.queryset = Advertisement.objects.all()
         else:
             self.queryset = Advertisement.objects.filter(~Q(status="DRAFT")|Q(creator=request.user))
 
@@ -27,7 +29,9 @@ class AdvertisementViewSet(ModelViewSet):
     def get_permissions(self):
         """Получение прав для действий."""
         if self.action in ["create"]:
-            return [IsAuthenticated()]
+            permissions = [IsAuthenticated]
         elif self.action in ["update", "partial_update", "destroy"]:
-            return [IsAuthenticated(), AccessPermission]
-        return []
+            permissions = [AccessPermission]
+        else:
+            permissions = []
+        return [permission() for permission in permissions]

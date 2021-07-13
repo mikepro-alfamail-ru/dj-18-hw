@@ -1,3 +1,27 @@
+# Выполнено
+
+## Измененные файлы:
+
+[filters.py](filters.py)
+
+[models.py](models.py)
+
+[permissions.py](permissions.py)
+
+[serializers.py](serializers.py)
+
+[views.py](views.py)
+
+[settings.py](settings.py)
+
+[urls.py](urls.py)
+
+## Выполнены доп-задания:
+
+- Права для админов
+
+- Добавить статус DRAFT
+
 # Backend для приложения с объявлениями
 
 ## Описание
