@@ -2,19 +2,19 @@
 
 ## Измененные файлы:
 
-[filters.py](filters.py)
+[filters.py](./advertisements/filters.py)
 
-[models.py](models.py)
+[models.py](./advertisements/models.py)
 
-[permissions.py](permissions.py)
+[permissions.py](./advertisements/permissions.py)
 
-[serializers.py](serializers.py)
+[serializers.py](./advertisements/serializers.py)
 
-[views.py](views.py)
+[views.py](./advertisements/views.py)
 
-[settings.py](settings.py)
+[settings.py](./api_with_restrictions/settings.py)
 
-[urls.py](urls.py)
+[urls.py](./api_with_restrictions/urls.py)
 
 ## Выполнены доп-задания:
 
