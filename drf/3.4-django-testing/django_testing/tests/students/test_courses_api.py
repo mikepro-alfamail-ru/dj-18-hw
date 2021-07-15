@@ -47,7 +47,9 @@ def test_courses_list(courses_factory, api_client):
 
 @pytest.mark.django_db
 def test_courses_id_filter(courses_factory, api_client):
-    '''проверка фильтрации списка курсов по id'''
+    '''
+    проверка фильтрации списка курсов по id
+    '''
     courses_factory(_quantity=5)
     names = Course.objects.all()
     id_set = set()
@@ -64,7 +66,10 @@ def test_courses_id_filter(courses_factory, api_client):
 
 @pytest.mark.django_db
 def test_courses_name_filter(courses_factory, api_client):
-    '''проверка фильтрации списка курсов по name'''
+    '''
+    проверка фильтрации списка курсов по name
+    '''
+
     for i in range(5):
         courses_factory(name=f'Course {i}')
     name = 'Course 3'
@@ -78,7 +83,10 @@ def test_courses_name_filter(courses_factory, api_client):
 
 @pytest.mark.django_db
 def test_courses_create(api_client):
-    '''тест успешного создания курса'''
+    '''
+    тест успешного создания курса
+    '''
+
     url = reverse('courses-list')
     name = 'Sample course'
     data = {'name': name}
