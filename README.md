@@ -20,5 +20,5 @@
 
 3.3. [Разделение доступа в DRF](./drf/3.3-permissions)
 
-3.4. [Тестирование Django-приложений с использованием Pytest]
-<!--(./drf/3.4-django-testing)-->
+3.4. [Тестирование Django-приложений с использованием Pytest](./drf/3.4-django-testing)
+

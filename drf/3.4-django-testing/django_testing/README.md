@@ -1,3 +1,15 @@
+# Выполнено
+
+## Измененные файлы:
+
+[settings.py](./django_testing/settings.py)
+
+[serializers.py](./students/serializers.py)
+
+[conftest.py](./tests/conftest.py)
+
+[test_courses_api.py](./tests/students/test_courses_api.py)
+
 # Тестирование Django-приложения
 
 ## Описание
